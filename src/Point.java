@@ -1,4 +1,3 @@
-package com.company;
 import java.lang.Math;
 import java.util.Random;
 
@@ -56,7 +55,6 @@ public class Point {
     public static Point generateMomentumWithLength1() {
         Random random = new Random();
         double t = 2 * Math.PI * random.nextDouble();
-
         return point(Math.cos(t), Math.sin(t));
     }
 }
