@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Vertical {
 
-    private static final double DELTA = 2; // degree
+    private static final double DELTA = 2;
     private static final int N = 10;
     private static final Point g = new Point(0, -10);
 
@@ -10,7 +10,7 @@ public class Vertical {
         Point initialPoint = generatePointInsideUnitCircle();
         Point initialMomentum = Point.multiply(generatePointInsideUnitCircle(),10);
 
-        calcAndDraw(initialPoint, initialMomentum);
+        calc(initialPoint, initialMomentum);
     }
 
     private static Point generatePointInsideUnitCircle() {
@@ -51,7 +51,7 @@ public class Vertical {
         return new Point((a * px + b * py), (b * px - a * py));
     }
 
-    private static void calcAndDraw(Point initialPoint, Point initialMomentum) {
+    private static void calc(Point initialPoint, Point initialMomentum) {
         List<Line> lines = new ArrayList<>();
         Point point = initialPoint;
         Point momentum = initialMomentum;

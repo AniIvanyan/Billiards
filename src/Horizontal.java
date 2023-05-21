@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Horizontal {
 
-    private static final double DELTA = 3; // degree
+    private static final double DELTA = 3;
     private static final int N = 10;
 
     public static void main(String[] args) {
@@ -34,7 +34,7 @@ public class Horizontal {
             Point intersection = findIntersection(point, nextPoint);
             Line line = new Line(point, intersection);
             reverseLines.add(line);
-            if (Math.atan2(line.getSlope(), lines.get(i).getSlope()) > DELTA && !deviationFound) {
+            if (Math.atan2(line.getSlope(), lines.get(lines.size() - i - 1).getSlope()) > DELTA && !deviationFound) {
                 System.out.println("After " + (i + 1) + " reflections the deviation is more than " + DELTA);
                 deviationFound = true;
             }
