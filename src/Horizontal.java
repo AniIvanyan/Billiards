@@ -17,7 +17,7 @@ public class Horizontal {
         Point point = initialPoint;
         Point momentum = initialMomentum;
         for (int i = 0; i < N; i++) {
-            Point nextPoint = point.add(point, momentum);
+            Point nextPoint = Point.add(point, momentum);
             Point intersection = findIntersection(point, nextPoint);
             lines.add(new Line(point, intersection));
 
@@ -30,7 +30,7 @@ public class Horizontal {
         List<Line> reverseLines = new ArrayList<>();
         boolean deviationFound = false;
         for (int i = 0; i < N; i++) {
-            Point nextPoint = point.add(point, momentum);
+            Point nextPoint = Point.add(point, momentum);
             Point intersection = findIntersection(point, nextPoint);
             Line line = new Line(point, intersection);
             reverseLines.add(line);
